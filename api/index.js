@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
+//MONGO is your DATABASE URL saved in .env file
 mongoose.connect(process.env.MONGO).then(()=>{
     console.log("Connected to MongoDB!");
 }).catch((err)=>{
