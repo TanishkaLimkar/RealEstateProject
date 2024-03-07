@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from './routes/user.route.js'
 dotenv.config();
 
 //MONGO is your DATABASE URL saved in .env file
@@ -15,3 +16,6 @@ const app = express();
 app.listen(3000, ()=> {
     console.log('Server Running on port 3000!! for push purpose');
 });
+
+
+app.use('/api/user',userRouter)
