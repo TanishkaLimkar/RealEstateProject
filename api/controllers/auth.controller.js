@@ -61,7 +61,7 @@ export const google=async(req,res,next)=>{
         }
         else
         {
-            const genratePasword=Math.random().toString(36).slice(-8)+Map.random().toString(36).slice(-8);
+            const genratePasword=Math.random().toString(36).slice(-8)+Math.random().toString(36).slice(-8);
             const hashPassword=bcryptjs.hashSync(genratePasword,10);
 
             const newUser=new User({username:req.body.name.split(" ").join("").toLowerCase()+Math.random().toString(36).slice(-4)  ,email:req.body.email,password:hashPassword,avatar:req.body.photo});
