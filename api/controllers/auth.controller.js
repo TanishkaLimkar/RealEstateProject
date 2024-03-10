@@ -76,13 +76,11 @@ export const google=async(req,res,next)=>{
         next(error);
     }
 };
-export const signOut = async(req, res , next) => {
-    try
-    {
+export const signOut = async (req, res, next) => {
+    try {
         res.clearCookie('access_token');
-        res.status(200).json('User has been logges out!!');
-    }catch(error)
-    {
+        res.status(200).json('User has been logged out!!'); // Corrected the typo
+    } catch (error) {
         next(error);
     }
-}
+};
