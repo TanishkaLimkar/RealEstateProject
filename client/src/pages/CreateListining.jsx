@@ -14,18 +14,18 @@ export default function CreateListing() {
   const navigate = useNavigate();
   const [files, setFiles] = useState([]);
   const [formData, setFormData] = useState({
-    imageUrls: [],
-    name: '',
-    description: '',
-    address: '',
-    type: 'rent',
-    bedrooms: 1,
-    bathrooms: 1,
-    regularPrice: 50,
-    discountPrice: 0,
-    offer: false,
-    parking: false,
-    furnished: false,
+      imageUrls: [],
+      name: '',
+      description: '',
+      address: '',
+      type: 'rent', 
+      bedrooms: 1,
+      bathrooms: 1,
+      regularPrice: 50,
+      discountPrice: 0,
+      offer: false,
+      parking: false,
+      furnished: false,
   });
   const [imageUploadError, setImageUploadError] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -253,7 +253,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
-              <p>Beds</p>
+              <p>Bedrooms</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -353,7 +353,7 @@ export default function CreateListing() {
                   onClick={() => handleRemoveImage(index)}
                   className='p-3 text-red-700 rounded-lg uppercase hover:opacity-75'
                 >
-                  Delete
+                Delete
                 </button>
               </div>
             ))}
